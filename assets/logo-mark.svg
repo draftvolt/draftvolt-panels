@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DRAFTVOLT mark">
+  <rect x="8" y="8" width="84" height="84" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <g stroke="currentColor" stroke-width="1" opacity="0.85">
+    <line x1="4"  y1="8"  x2="12" y2="8"/><line x1="8"  y1="4"  x2="8"  y2="12"/>
+    <line x1="88" y1="8"  x2="96" y2="8"/><line x1="92" y1="4"  x2="92" y2="12"/>
+    <line x1="4"  y1="92" x2="12" y2="92"/><line x1="8"  y1="88" x2="8"  y2="96"/>
+    <line x1="88" y1="92" x2="96" y2="92"/><line x1="92" y1="88" x2="92" y2="96"/>
+  </g>
+  <path d="M 58 20 L 30 54 L 46 54 L 38 80 L 68 44 L 52 44 Z"
+        fill="#C9762E" stroke="currentColor" stroke-width="0.6"/>
+</svg>

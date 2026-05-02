@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="alternate icon" href="assets/favicon-256.png" />
+<title>DRAFTVOLT · Panel Passports</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --paper: #0C0A07;
+  --ink:   #E9E0C9;
+  --ink-soft: #ADA28C;
+  --copper: #C9762E;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'IBM Plex Mono', monospace;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 32px;
+  -webkit-font-smoothing: antialiased;
+}
+.mark {
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--copper);
+  border-radius: 2px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 22px;
+}
+.mark img { width: 32px; height: 32px; }
+h1 {
+  font-family: 'Big Shoulders Display', Impact, sans-serif;
+  font-weight: 500;
+  font-size: 34px;
+  letter-spacing: 0.05em;
+  margin: 0 0 8px;
+}
+p {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--ink-soft);
+  max-width: 38ch;
+  line-height: 1.7;
+  margin: 0 auto;
+}
+.copper { color: var(--copper); }
+.spacer { height: 28px; }
+small {
+  display: block;
+  margin-top: 36px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<div>
+  <div class="mark"><img src="assets/logo-mark.svg" alt="" /></div>
+  <h1>DRAFTVOLT</h1>
+  <p>Panel Passport Archive</p>
+  <div class="spacer"></div>
+  <p>Each passport is reachable only via the <span class="copper">slug</span> printed on the sticker inside its distribution board.</p>
+  <small>MMXXVI</small>
+</div>
+
+</body>
+</html>

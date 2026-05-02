@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+<link rel="alternate icon" href="../../assets/favicon-256.png" />
+<title>DRAFTVOLT · Panel Passport · DV-7K2M9</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --paper:        #0C0A07;
+  --paper-deep:   #14110C;
+  --paper-edge:   #1F1A13;
+  --plate:        #EFE7D4;
+  --plate-edge:   #C8BC9F;
+  --plate-ink:    #1A1612;
+  --ink:          #E9E0C9;
+  --ink-soft:     #ADA28C;
+  --ink-faint:    rgba(233, 224, 201, 0.14);
+  --ink-hair:     rgba(233, 224, 201, 0.30);
+  --copper:       #C9762E;
+  --copper-bright:#E89651;
+  --copper-deep:  #8E5320;
+  --amber:        #E5A655;
+  --steel:        #4A4640;
+
+  --f-display: 'Big Shoulders Display', 'Impact', 'Arial Narrow', sans-serif;
+  --f-body:    'IBM Plex Sans', 'Helvetica Neue', system-ui, sans-serif;
+  --f-mono:    'IBM Plex Mono', 'JetBrains Mono', 'Courier New', monospace;
+
+  --gutter:    clamp(20px, 4vw, 64px);
+  --rule:      1px solid var(--ink-faint);
+  --rule-hair: 1px solid var(--ink-hair);
+  --rule-copper: 1px solid var(--copper);
+  --max:       960px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img, svg { max-width: 100%; display: block; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern", "liga", "onum";
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 1 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+::selection { background: var(--copper); color: var(--paper); }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(28px, 6vw, 64px) var(--gutter) clamp(48px, 8vw, 96px);
+}
+
+.mono {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+.mono-lg { font-size: 13px; letter-spacing: 0.18em; color: var(--ink); }
+.mono-copper { color: var(--copper); }
+
+/* -------- Masthead -------- */
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 16px;
+  border-bottom: var(--rule-hair);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--copper);
+  border-radius: 2px;
+  display: grid;
+  place-items: center;
+  background: var(--paper-deep);
+}
+.brand-mark img { width: 22px; height: 22px; }
+.brand-name {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.masthead .slug { text-align: right; }
+.masthead .slug-id {
+  font-family: var(--f-mono);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  color: var(--copper);
+}
+
+/* -------- Title block -------- */
+.title-block {
+  padding: clamp(28px, 5vw, 56px) 0 clamp(20px, 4vw, 32px);
+  border-bottom: var(--rule-hair);
+}
+.kicker {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 11px;
+  color: var(--copper);
+  margin-bottom: 14px;
+}
+h1.title {
+  font-family: var(--f-display);
+  font-weight: 350;
+  font-size: clamp(42px, 8vw, 84px);
+  line-height: 0.95;
+  letter-spacing: -0.015em;
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+.subtitle {
+  font-family: var(--f-body);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(15px, 1.6vw, 18px);
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+
+/* -------- Identification grid -------- */
+.idgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0;
+  margin-top: 28px;
+  border-top: var(--rule-hair);
+  border-left: var(--rule-hair);
+}
+.idgrid > div {
+  padding: 14px 16px;
+  border-right: var(--rule-hair);
+  border-bottom: var(--rule-hair);
+}
+.idgrid dt {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 10px;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.idgrid dd {
+  margin: 0;
+  font-family: var(--f-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.idgrid dd.tbd { color: var(--ink-soft); font-weight: 300; font-style: italic; }
+
+/* -------- Section -------- */
+section {
+  padding: clamp(36px, 6vw, 64px) 0;
+  border-bottom: var(--rule-hair);
+}
+section:last-of-type { border-bottom: none; }
+.section-num {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.section-num .num {
+  font-family: var(--f-mono);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  color: var(--copper);
+}
+.section-num h2 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(22px, 3vw, 30px);
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* -------- Panel render plate -------- */
+.plate-wrap {
+  background: var(--plate);
+  border: 1px solid var(--plate-edge);
+  border-radius: 2px;
+  padding: clamp(16px, 3vw, 28px);
+  position: relative;
+}
+.plate-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(26, 22, 18, 0.12);
+  pointer-events: none;
+  border-radius: 1px;
+}
+.plate-wrap img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 520px;
+}
+.plate-cap {
+  margin-top: 14px;
+  text-align: center;
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 10px;
+  color: var(--plate-ink);
+  opacity: 0.65;
+}
+
+/* -------- Spec rows (incoming protection) -------- */
+.spec-list {
+  display: grid;
+  gap: 0;
+  border-top: var(--rule-hair);
+}
+.spec-list > .spec {
+  display: grid;
+  grid-template-columns: minmax(160px, 220px) 1fr;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: var(--rule-hair);
+  align-items: baseline;
+}
+.spec .label {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+.spec .value {
+  font-family: var(--f-body);
+  font-size: 15px;
+  color: var(--ink);
+}
+.spec .value .meta {
+  display: block;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+.tbd-inline { color: var(--ink-soft); font-style: italic; }
+
+/* -------- Schedule table -------- */
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.schedule thead th {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10px;
+  color: var(--copper);
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 12px 10px 0;
+  border-bottom: var(--rule-copper);
+  white-space: nowrap;
+}
+.schedule tbody td {
+  padding: 14px 12px 14px 0;
+  border-bottom: var(--rule-hair);
+  vertical-align: top;
+}
+.schedule tbody tr:last-child td { border-bottom: var(--rule-hair); }
+.schedule .slot {
+  font-family: var(--f-mono);
+  letter-spacing: 0.1em;
+  color: var(--copper);
+  font-size: 12px;
+}
+.schedule .label {
+  font-family: var(--f-display);
+  font-size: 17px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.schedule .device {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.schedule .num {
+  font-family: var(--f-mono);
+  font-size: 13px;
+  color: var(--ink);
+  letter-spacing: 0.06em;
+}
+.schedule .feeds {
+  font-family: var(--f-body);
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.schedule .tbd { color: var(--ink-soft); font-style: italic; opacity: 0.6; }
+
+@media (max-width: 720px) {
+  .schedule, .schedule thead, .schedule tbody, .schedule tr, .schedule th, .schedule td {
+    display: block;
+  }
+  .schedule thead { display: none; }
+  .schedule tbody tr {
+    padding: 14px 0;
+    border-bottom: var(--rule-hair);
+  }
+  .schedule tbody td {
+    padding: 3px 0;
+    border: none;
+  }
+  .schedule .label { display: inline-block; margin-right: 12px; }
+  .schedule .slot { display: inline-block; margin-right: 12px; }
+}
+
+/* -------- Care card -------- */
+.care {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0;
+  border-top: var(--rule-hair);
+  border-left: var(--rule-hair);
+}
+.care .item {
+  padding: 18px 20px;
+  border-right: var(--rule-hair);
+  border-bottom: var(--rule-hair);
+}
+.care .item h3 {
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  margin: 0 0 8px;
+  color: var(--copper);
+}
+.care .item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.care .item .ord {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* -------- Service card -------- */
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 24px 0;
+  border-top: var(--rule-copper);
+  border-bottom: var(--rule-copper);
+}
+.service .who {
+  flex: 1 1 220px;
+}
+.service .name {
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0 0 4px;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.service .role {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  color: var(--copper);
+}
+.service dl {
+  flex: 2 1 320px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 18px;
+  margin: 0;
+  align-content: start;
+}
+.service dt {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10px;
+  color: var(--ink-soft);
+  align-self: baseline;
+}
+.service dd {
+  margin: 0;
+  font-family: var(--f-body);
+  font-size: 15px;
+  color: var(--ink);
+}
+.service a { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--copper); }
+.service a:hover { color: var(--copper-bright); }
+
+/* -------- Colophon -------- */
+.colophon {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: var(--rule-hair);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 10px;
+  color: var(--ink-soft);
+}
+.colophon .right { text-align: right; }
+.colophon .copper { color: var(--copper); }
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <!-- ============== MASTHEAD ============== -->
+  <header class="masthead">
+    <div class="brand">
+      <div class="brand-mark"><img src="../../assets/logo-mark.svg" alt="" /></div>
+      <span class="brand-name">DRAFTVOLT</span>
+    </div>
+    <div class="slug">
+      <div class="mono">Panel Passport</div>
+      <div class="slug-id">DV-7K2M9</div>
+    </div>
+  </header>
+
+  <!-- ============== TITLE ============== -->
+  <div class="title-block">
+    <div class="kicker">As-Built · Distribution Board · Anno MMXXVI</div>
+    <h1 class="title">Davit · Residence</h1>
+    <p class="subtitle">A complete record of the protective devices, branch circuits, and incoming reference values for this panel — for the householder, and for any electrician who opens this box after us.</p>
+
+    <dl class="idgrid">
+      <div><dt>Customer</dt><dd>Davit</dd></div>
+      <div><dt>Address</dt><dd class="tbd">— to be filled —</dd></div>
+      <div><dt>Installation Date</dt><dd class="tbd">— to be filled —</dd></div>
+      <div><dt>Master Electrician</dt><dd>Vano Grigoryan</dd></div>
+      <div><dt>Panel Reference</dt><dd>DV-7K2M9</dd></div>
+      <div><dt>Standard</dt><dd>DRAFTVOLT · Tier III+</dd></div>
+    </dl>
+  </div>
+
+  <!-- ============== § 01 RENDER ============== -->
+  <section>
+    <div class="section-num"><span class="num">§ 01</span><h2>Panel Render</h2></div>
+    <div class="plate-wrap">
+      <img src="panel.jpg" alt="DRAFTVOLT panel layout for the Davit residence — distribution board diagram showing main breaker, voltage relay, RCD, AC branch breaker, and six branch RCBOs labelled per circuit." />
+      <div class="plate-cap">Plate № I — Distribution Board, drawn to layout · DRAFTVOLT MMXXVI</div>
+    </div>
+  </section>
+
+  <!-- ============== § 02 INCOMING PROTECTION ============== -->
+  <section>
+    <div class="section-num"><span class="num">§ 02</span><h2>Incoming Protection</h2></div>
+
+    <div class="spec-list">
+
+      <div class="spec">
+        <span class="label">Main Breaker</span>
+        <span class="value">
+          IEK BA47-29 · Curve C · 50 A · 2-pole
+          <span class="meta">Disconnects line + neutral upstream of the bus</span>
+        </span>
+      </div>
+
+      <div class="spec">
+        <span class="label">Voltage Relay</span>
+        <span class="value">
+          RNPP-220 / Karat · single-phase · 230 V nominal
+          <span class="meta">U<sub>min</sub> <span class="tbd-inline">— TBD —</span> · U<sub>max</sub> <span class="tbd-inline">— TBD —</span> · Reconnect delay <span class="tbd-inline">— TBD —</span></span>
+        </span>
+      </div>
+
+      <div class="spec">
+        <span class="label">Main RCD</span>
+        <span class="value">
+          ABB · Type AC · I<sub>n</sub> <span class="tbd-inline">— TBD —</span> · IΔ<sub>n</sub> <span class="tbd-inline">— TBD —</span>
+          <span class="meta">Backup residual-current protection for the whole board</span>
+        </span>
+      </div>
+
+      <div class="spec">
+        <span class="label">Timer / Module</span>
+        <span class="value">
+          ABB M1173 · 16 A / 250 V
+          <span class="meta">Programmed function <span class="tbd-inline">— TBD —</span></span>
+        </span>
+      </div>
+
+      <div class="spec">
+        <span class="label">Bonding</span>
+        <span class="value">
+          PE bus (yellow / green) bonded to dedicated earth terminal · N bus (blue) isolated
+          <span class="meta">TN-S separation maintained from the main bond point</span>
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============== § 03 BRANCH SCHEDULE ============== -->
+  <section>
+    <div class="section-num"><span class="num">§ 03</span><h2>Branch Circuit Schedule</h2></div>
+
+    <table class="schedule">
+      <thead>
+        <tr>
+          <th>Slot</th>
+          <th>Label</th>
+          <th>Device</th>
+          <th>Curve</th>
+          <th>I<sub>n</sub></th>
+          <th>IΔ<sub>n</sub></th>
+          <th>Cable</th>
+          <th>Feeds</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="slot">01</td>
+          <td><span class="label">AC</span></td>
+          <td class="device">IEK BA47-29 (MCB · 2P)</td>
+          <td class="num">C</td>
+          <td class="num">32 A</td>
+          <td class="num tbd">— via main RCD —</td>
+          <td class="num tbd">— TBD —</td>
+          <td class="feeds">Air-conditioning unit</td>
+        </tr>
+        <tr>
+          <td class="slot">02</td>
+          <td><span class="label">WASH</span></td>
+          <td class="device">IEK АД12М (RCBO)</td>
+          <td class="num">C</td>
+          <td class="num">32 A</td>
+          <td class="num">30 mA</td>
+          <td class="num tbd">— TBD —</td>
+          <td class="feeds">Washing machine / utility outlets</td>
+        </tr>
+        <tr>
+          <td class="slot">03</td>
+          <td><span class="label">COR.</span></td>
+          <td class="device">IEK АД12М (RCBO)</td>
+          <td class="num">C</td>
+          <td class="num">16 A</td>
+          <td class="num">30 mA</td>
+          <td class="num tbd">— TBD —</td>
+          <td class="feeds">Corridor lighting and outlets</td>
+        </tr>
+        <tr>
+          <td class="slot">04</td>
+          <td><span class="label">BATH</span></td>
+          <td class="device">IEK АД12М (RCBO)</td>
+          <td class="num">C</td>
+          <td class="num">25 A</td>
+          <td class="num">30 mA</td>
+          <td class="num tbd">— TBD —</td>
+          <td class="feeds">Bathroom — water heater, lighting, sockets</td>
+        </tr>
+        <tr>
+          <td class="slot">05</td>
+          <td><span class="label">KITCH</span></td>
+          <td class="device">IEK АД12М (RCBO)</td>
+          <td class="num">C</td>
+          <td class="num">32 A</td>
+          <td class="num">30 mA</td>
+          <td class="num tbd">— TBD —</td>
+          <td class="feeds">Kitchen sockets and appliances</td>
+        </tr>
+        <tr>
+          <td class="slot">06</td>
+          <td><span class="label">HALL</span></td>
+          <td class="device">IEK АД12М (RCBO)</td>
+          <td class="num">C</td>
+          <td class="num">25 A</td>
+          <td class="num">30 mA</td>
+          <td class="num tbd">— TBD —</td>
+          <td class="feeds">Hall lighting and outlets</td>
+        </tr>
+        <tr>
+          <td class="slot">07</td>
+          <td><span class="label">BEDR</span></td>
+          <td class="device">IEK АД12М (RCBO)</td>
+          <td class="num">C</td>
+          <td class="num">25 A</td>
+          <td class="num">30 mA</td>
+          <td class="num tbd">— TBD —</td>
+          <td class="feeds">Bedroom lighting and outlets</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ============== § 04 OPERATING NOTES ============== -->
+  <section>
+    <div class="section-num"><span class="num">§ 04</span><h2>If Something Trips</h2></div>
+
+    <div class="care">
+      <div class="item">
+        <span class="ord">Note I</span>
+        <h3>A breaker has tripped</h3>
+        <p>Open the box, locate the lever in the lower position, switch off everything connected to that circuit, and lift the lever back up. If it trips again immediately, leave it off and call us — there is a fault on the circuit.</p>
+      </div>
+      <div class="item">
+        <span class="ord">Note II</span>
+        <h3>The voltage relay has cut power</h3>
+        <p>This is protection working as intended. The grid voltage went outside the safe window. The relay will re-close on its own once voltage stabilises, after the programmed delay.</p>
+      </div>
+      <div class="item">
+        <span class="ord">Note III</span>
+        <h3>Monthly RCD test</h3>
+        <p>Once a month, press the small <strong>T</strong> button on each RCBO. The lever should snap down. Lift it back up. This confirms the residual-current protection is alive.</p>
+      </div>
+      <div class="item">
+        <span class="ord">Note IV</span>
+        <h3>Total blackout</h3>
+        <p>If nothing in the box has tripped and the whole flat is dark, it is a building-side outage, not your panel. Wait for the supply to return — the relay will handle re-energisation safely.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== § 05 SERVICE ============== -->
+  <section>
+    <div class="section-num"><span class="num">§ 05</span><h2>Service</h2></div>
+
+    <div class="service">
+      <div class="who">
+        <h3 class="name">Vano Grigoryan</h3>
+        <span class="role">Master Electrician · DRAFTVOLT</span>
+      </div>
+      <dl>
+        <dt>Telephone</dt>
+        <dd><a href="tel:+37498729898">+374 98 72 98 98</a></dd>
+        <dt>Email</dt>
+        <dd><a href="mailto:vanogrigoryan7@gmail.com">vanogrigoryan7@gmail.com</a></dd>
+        <dt>Standards Reference</dt>
+        <dd>DRAFTVOLT — Five Standards, Catalogue №.05</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============== COLOPHON ============== -->
+  <footer class="colophon">
+    <div>
+      <div>Drawn · Wired · Documented · MMXXVI</div>
+      <div class="copper">DRAFTVOLT</div>
+    </div>
+    <div class="right">
+      <div>Passport · DV-7K2M9</div>
+      <div>This document is unique to this panel.</div>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
