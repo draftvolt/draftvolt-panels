@@ -234,8 +234,12 @@ section:last-of-type { border-bottom: none; }
   width: 100%;
   height: auto;
   margin: 0 auto;
-  max-width: 520px;
+  max-width: 1064px;
+  position: relative;
+  z-index: 10000; /* above the paper-grain overlay */
+  image-rendering: -webkit-optimize-contrast;
 }
+.plate-wrap a { display: block; cursor: zoom-in; }
 .plate-cap {
   margin-top: 14px;
   text-align: center;
@@ -509,7 +513,7 @@ section:last-of-type { border-bottom: none; }
   <section>
     <div class="section-num"><span class="num">§ 01</span><h2>Panel Render</h2></div>
     <div class="plate-wrap">
-      <img src="panel.jpg" alt="DRAFTVOLT panel layout for Stories Party House in Zovuni: 100 A main switch, three-phase voltage monitor, SAV 100 A generator ATS; Wi-Fi controlled 100 A contactor, 63 A three-pole breaker, Energomera three-phase meter, LED contactor; three phase rows with per-phase relays, RCDs, branch breakers, pool timer and contactor, and four M1173 sockets." />
+      <a href="panel.jpg" target="_blank" rel="noopener"><img src="panel.jpg" alt="DRAFTVOLT panel layout for Stories Party House in Zovuni: 100 A main switch, three-phase voltage monitor, SAV 100 A generator ATS; Wi-Fi controlled 100 A contactor, 63 A three-pole breaker, Energomera three-phase meter, LED contactor; three phase rows with per-phase relays, RCDs, branch breakers, pool timer and contactor, and four M1173 sockets." /></a>
       <div class="plate-cap">Plate № I — Distribution Board, drawn to layout · DRAFTVOLT MMXXVI</div>
     </div>
   </section>
