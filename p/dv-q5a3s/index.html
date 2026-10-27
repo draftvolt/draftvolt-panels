@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+<link rel="alternate icon" href="../../assets/favicon-256.png" />
+<title>DRAFTVOLT · Panel Passport · DV-Q5A3S</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --paper:        #0C0A07;
+  --paper-deep:   #14110C;
+  --paper-edge:   #1F1A13;
+  --plate:        #EFE7D4;
+  --plate-edge:   #C8BC9F;
+  --plate-ink:    #1A1612;
+  --ink:          #E9E0C9;
+  --ink-soft:     #ADA28C;
+  --ink-faint:    rgba(233, 224, 201, 0.14);
+  --ink-hair:     rgba(233, 224, 201, 0.30);
+  --copper:       #C9762E;
+  --copper-bright:#E89651;
+  --copper-deep:  #8E5320;
+  --amber:        #E5A655;
+  --steel:        #4A4640;
+
+  --f-display: 'Big Shoulders Display', 'Impact', 'Arial Narrow', sans-serif;
+  --f-body:    'IBM Plex Sans', 'Helvetica Neue', system-ui, sans-serif;
+  --f-mono:    'IBM Plex Mono', 'JetBrains Mono', 'Courier New', monospace;
+
+  --gutter:    clamp(20px, 4vw, 64px);
+  --rule:      1px solid var(--ink-faint);
+  --rule-hair: 1px solid var(--ink-hair);
+  --rule-copper: 1px solid var(--copper);
+  --max:       960px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img, svg { max-width: 100%; display: block; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern", "liga", "onum";
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 1 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+::selection { background: var(--copper); color: var(--paper); }
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(28px, 6vw, 64px) var(--gutter) clamp(48px, 8vw, 96px);
+}
+
+.mono {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+.mono-lg { font-size: 13px; letter-spacing: 0.18em; color: var(--ink); }
+.mono-copper { color: var(--copper); }
+
+/* -------- Masthead -------- */
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 16px;
+  border-bottom: var(--rule-hair);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--copper);
+  border-radius: 2px;
+  display: grid;
+  place-items: center;
+  background: var(--paper-deep);
+}
+.brand-mark img { width: 22px; height: 22px; }
+.brand-name {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.masthead .slug { text-align: right; }
+.masthead .slug-id {
+  font-family: var(--f-mono);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  color: var(--copper);
+}
+
+/* -------- Title block -------- */
+.title-block {
+  padding: clamp(28px, 5vw, 56px) 0 clamp(20px, 4vw, 32px);
+  border-bottom: var(--rule-hair);
+}
+.kicker {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 11px;
+  color: var(--copper);
+  margin-bottom: 14px;
+}
+h1.title {
+  font-family: var(--f-display);
+  font-weight: 350;
+  font-size: clamp(42px, 8vw, 84px);
+  line-height: 0.95;
+  letter-spacing: -0.015em;
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+.subtitle {
+  font-family: var(--f-body);
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(15px, 1.6vw, 18px);
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+
+/* -------- Identification grid -------- */
+.idgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0;
+  margin-top: 28px;
+  border-top: var(--rule-hair);
+  border-left: var(--rule-hair);
+}
+.idgrid > div {
+  padding: 14px 16px;
+  border-right: var(--rule-hair);
+  border-bottom: var(--rule-hair);
+}
+.idgrid dt {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 10px;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+.idgrid dd {
+  margin: 0;
+  font-family: var(--f-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.idgrid dd.tbd { color: var(--ink-soft); font-weight: 300; font-style: italic; }
+
+/* -------- Section -------- */
+section {
+  padding: clamp(36px, 6vw, 64px) 0;
+  border-bottom: var(--rule-hair);
+}
+section:last-of-type { border-bottom: none; }
+.section-num {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.section-num .num {
+  font-family: var(--f-mono);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  color: var(--copper);
+}
+.section-num h2 {
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(22px, 3vw, 30px);
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* -------- Panel render plate -------- */
+.plate-wrap {
+  background: var(--plate);
+  border: 1px solid var(--plate-edge);
+  border-radius: 2px;
+  padding: clamp(16px, 3vw, 28px);
+  position: relative;
+}
+.plate-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(26, 22, 18, 0.12);
+  pointer-events: none;
+  border-radius: 1px;
+}
+.plate-wrap img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-width: 520px;
+}
+.plate-cap {
+  margin-top: 14px;
+  text-align: center;
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 10px;
+  color: var(--plate-ink);
+  opacity: 0.65;
+}
+.plate-pending {
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 11px;
+  color: var(--plate-ink);
+  opacity: 0.55;
+  background: repeating-linear-gradient(135deg, rgba(26,22,18,0.04) 0 14px, rgba(26,22,18,0.07) 14px 28px);
+}
+
+/* -------- Spec rows (incoming protection) -------- */
+.spec-list {
+  display: grid;
+  gap: 0;
+  border-top: var(--rule-hair);
+}
+.spec-list > .spec {
+  display: grid;
+  grid-template-columns: minmax(160px, 220px) 1fr;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: var(--rule-hair);
+  align-items: baseline;
+}
+.spec .label {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+.spec .value {
+  font-family: var(--f-body);
+  font-size: 15px;
+  color: var(--ink);
+}
+.spec .value .meta {
+  display: block;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+.tbd-inline { color: var(--ink-soft); font-style: italic; }
+
+/* -------- Schedule table -------- */
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.schedule thead th {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10px;
+  color: var(--copper);
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 12px 10px 0;
+  border-bottom: var(--rule-copper);
+  white-space: nowrap;
+}
+.schedule tbody td {
+  padding: 14px 12px 14px 0;
+  border-bottom: var(--rule-hair);
+  vertical-align: top;
+}
+.schedule tbody tr:last-child td { border-bottom: var(--rule-hair); }
+.schedule .slot {
+  font-family: var(--f-mono);
+  letter-spacing: 0.1em;
+  color: var(--copper);
+  font-size: 12px;
+}
+.schedule .label {
+  font-family: var(--f-display);
+  font-size: 17px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.schedule .device {
+  font-family: var(--f-mono);
+  font-size: 12px;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.schedule .num {
+  font-family: var(--f-mono);
+  font-size: 13px;
+  color: var(--ink);
+  letter-spacing: 0.06em;
+}
+.schedule .feeds {
+  font-family: var(--f-body);
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.schedule .tbd { color: var(--ink-soft); font-style: italic; opacity: 0.6; }
+
+@media (max-width: 720px) {
+  .schedule, .schedule thead, .schedule tbody, .schedule tr, .schedule th, .schedule td {
+    display: block;
+  }
+  .schedule thead { display: none; }
+  .schedule tbody tr {
+    padding: 14px 0;
+    border-bottom: var(--rule-hair);
+  }
+  .schedule tbody td {
+    padding: 3px 0;
+    border: none;
+  }
+  .schedule .label { display: inline-block; margin-right: 12px; }
+  .schedule .slot { display: inline-block; margin-right: 12px; }
+}
+
+/* -------- Care card -------- */
+.care {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0;
+  border-top: var(--rule-hair);
+  border-left: var(--rule-hair);
+}
+.care .item {
+  padding: 18px 20px;
+  border-right: var(--rule-hair);
+  border-bottom: var(--rule-hair);
+}
+.care .item h3 {
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  margin: 0 0 8px;
+  color: var(--copper);
+}
+.care .item p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.care .item .ord {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* -------- Service card -------- */
+.service {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 24px 0;
+  border-top: var(--rule-copper);
+  border-bottom: var(--rule-copper);
+}
+.service .who {
+  flex: 1 1 220px;
+}
+.service .name {
+  font-family: var(--f-display);
+  font-weight: 500;
+  font-size: 24px;
+  margin: 0 0 4px;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.service .role {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  color: var(--copper);
+}
+.service dl {
+  flex: 2 1 320px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 18px;
+  margin: 0;
+  align-content: start;
+}
+.service dt {
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10px;
+  color: var(--ink-soft);
+  align-self: baseline;
+}
+.service dd {
+  margin: 0;
+  font-family: var(--f-body);
+  font-size: 15px;
+  color: var(--ink);
+}
+.service a { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--copper); }
+.service a:hover { color: var(--copper-bright); }
+
+/* -------- Colophon -------- */
+.colophon {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: var(--rule-hair);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: var(--f-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 10px;
+  color: var(--ink-soft);
+}
+.colophon .right { text-align: right; }
+.colophon .copper { color: var(--copper); }
+</style>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="brand">
+      <div class="brand-mark"><img src="../../assets/logo-mark.svg" alt="" /></div>
+      <span class="brand-name">DRAFTVOLT</span>
+    </div>
+    <div class="slug">
+      <div class="mono">Panel Passport</div>
+      <div class="slug-id">DV-Q5A3S</div>
+    </div>
+  </header>
+
+  <div class="title-block">
+    <div class="kicker">As-Built · Distribution Board · Anno MMXXVI</div>
+    <h1 class="title">Stories Party House · Zovuni</h1>
+    <p class="subtitle">A record of the protection, three-phase distribution, generator transfer and branch circuits installed at this house, for the owner and for any electrician who opens this box after us.</p>
+
+    <dl class="idgrid">
+      <div><dt>Customer</dt><dd>Stories Party House</dd></div>
+      <div><dt>Address</dt><dd>Zovuni, Kotayk</dd></div>
+      <div><dt>Installation Date</dt><dd>October 2026</dd></div>
+      <div><dt>Master Electrician</dt><dd>Vano Grigoryan</dd></div>
+      <div><dt>Panel Reference</dt><dd>DV-Q5A3S</dd></div>
+      <div><dt>Standard</dt><dd>DRAFTVOLT · Three-phase · Generator ATS</dd></div>
+    </dl>
+  </div>
+
+  <section>
+    <div class="section-num"><span class="num">§ 01</span><h2>Panel Render</h2></div>
+    <div class="plate-wrap">
+      <img src="panel.jpg" alt="DRAFTVOLT panel layout for Stories Party House in Zovuni: 100 A main switch, three-phase voltage monitor, SAV 100 A generator ATS; Wi-Fi controlled 100 A contactor, 63 A three-pole breaker, Energomera three-phase meter, LED contactor; three phase rows with per-phase relays, RCDs, branch breakers, pool timer and contactor, and four M1173 sockets." />
+      <div class="plate-cap">Plate № I — Distribution Board, drawn to layout · DRAFTVOLT MMXXVI</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-num"><span class="num">§ 02</span><h2>Incoming Protection</h2></div>
+    <div class="spec-list">
+      <div class="spec">
+        <span class="label">Main Breaker</span>
+        <span class="value">
+          100 A · 4-pole main switch
+          <span class="meta">Isolates all three phases and neutral upstream of everything, including the transfer switch</span>
+        </span>
+      </div>
+      <div class="spec">
+        <span class="label">3-Phase Protection</span>
+        <span class="value">
+          Three-phase voltage monitor · per-phase digital readout
+          <span class="meta">Disconnects on over/under-voltage or phase loss. Setpoints <span class="tbd-inline">— TBD —</span></span>
+        </span>
+      </div>
+      <div class="spec">
+        <span class="label">Generator Transfer</span>
+        <span class="value">
+          SAV SHQ5-100A 4P · automatic transfer switch (ATS)
+          <span class="meta">Switches the house between mains and generator on its own. The generator ATS control group to its right must not be touched</span>
+        </span>
+      </div>
+      <div class="spec">
+        <span class="label">Main Contactor</span>
+        <span class="value">
+          100 A common contactor · Wi-Fi remote switch on its coil
+          <span class="meta">The whole house can be switched off remotely through the Wi-Fi switch</span>
+        </span>
+      </div>
+      <div class="spec">
+        <span class="label">Main Automatic</span>
+        <span class="value">
+          3-pole 63 A circuit breaker
+          <span class="meta">Downstream of the contactor, feeding the meter and the phase buses</span>
+        </span>
+      </div>
+      <div class="spec">
+        <span class="label">Meter</span>
+        <span class="value">
+          Energomera CE 301 · three-phase
+          <span class="meta">Feeds the L1 / L2 / L3 distribution blocks</span>
+        </span>
+      </div>
+      <div class="spec">
+        <span class="label">LED Contactor</span>
+        <span class="value">
+          Modular contactor for the 700 W LED line
+          <span class="meta">What drives its coil <span class="tbd-inline">— TBD —</span></span>
+        </span>
+      </div>
+      <div class="spec">
+        <span class="label">Per-Phase Relays</span>
+        <span class="value">
+          Each phase: phase main breaker + voltage &amp; current relay (230 V / 10 A readout)
+          <span class="meta">Each phase is protected on its own, so a fault on one phase does not take down the other two. Setpoints <span class="tbd-inline">— TBD —</span></span>
+        </span>
+      </div>
+      <div class="spec">
+        <span class="label">Residual Current</span>
+        <span class="value">
+          3 RCDs · 30 mA · hall &amp; kitchen (32 A), 700 W LED (ABB 25 A), pool (32 A)
+          <span class="meta">There is no main RCD. Heat pump, freezer, fence lights, utility room, both ACs, irrigation and the in-board sockets have overcurrent protection only, unless the drawing does not show the full wiring</span>
+        </span>
+      </div>
+      <div class="spec">
+        <span class="label">Bonding</span>
+        <span class="value">
+          PE bus bonded to earth · common single-phase neutral bus
+          <span class="meta">Phase buses L1 / L2 / L3 each carry their own neutral bar</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-num"><span class="num">§ 03</span><h2>Branch Circuit Schedule</h2></div>
+    <table class="schedule">
+      <thead>
+        <tr>
+          <th>Slot</th><th>Label</th><th>Device</th><th>Curve</th>
+          <th>I<sub>n</sub></th><th>IΔ<sub>n</sub></th><th>Cable</th><th>Feeds</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="slot" colspan="8"><strong>Phase L1</strong></td></tr>
+        <tr>
+          <td class="slot">1-R</td>
+          <td><span class="label">RCD HALL/KIT</span></td>
+          <td class="device">IEK ВД1-63 (RCD)</td>
+          <td class="num">—</td>
+          <td class="num">32 A</td>
+          <td class="num">30 mA</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Residual-current protection for hall &amp; kitchen</td>
+        </tr>
+        <tr>
+          <td class="slot">1-01</td>
+          <td><span class="label">HALL &amp; KITCHEN</span></td>
+          <td class="device">IEK ВА47-29</td>
+          <td class="num">C</td>
+          <td class="num">32 A</td>
+          <td class="num">—</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Hall and kitchen</td>
+        </tr>
+        <tr>
+          <td class="slot">1-02</td>
+          <td><span class="label">BIG AC</span></td>
+          <td class="device">IEK ВА47-29</td>
+          <td class="num">C</td>
+          <td class="num">40 A</td>
+          <td class="num">—</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Large air conditioner</td>
+        </tr>
+        <tr>
+          <td class="slot">1-03</td>
+          <td><span class="label">DISHWASHER</span></td>
+          <td class="device">IEK ВА47-29</td>
+          <td class="num">C</td>
+          <td class="num">40 A</td>
+          <td class="num">—</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Dishwasher</td>
+        </tr>
+        <tr>
+          <td class="slot">1-R2</td>
+          <td><span class="label">RCD LED</span></td>
+          <td class="device">ABB F204 A (4-pole RCD)</td>
+          <td class="num">—</td>
+          <td class="num">25 A</td>
+          <td class="num">30 mA</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Residual-current protection for the 700 W LED line</td>
+        </tr>
+        <tr><td class="slot" colspan="8"><strong>Phase L2</strong></td></tr>
+        <tr>
+          <td class="slot">2-01</td>
+          <td><span class="label">FENCE LIGHTS</span></td>
+          <td class="device">IEK ВА47-29</td>
+          <td class="num">C</td>
+          <td class="num">16 A</td>
+          <td class="num">—</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Lamps on the fence, left side</td>
+        </tr>
+        <tr>
+          <td class="slot">2-02</td>
+          <td><span class="label">UTILITY ROOM</span></td>
+          <td class="device">IEK ВА47-29</td>
+          <td class="num">C</td>
+          <td class="num">25 A</td>
+          <td class="num">—</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Utility room</td>
+        </tr>
+        <tr>
+          <td class="slot">2-03</td>
+          <td><span class="label">HEAT PUMP</span></td>
+          <td class="device">IEK ВА47-29</td>
+          <td class="num">C</td>
+          <td class="num">32 A</td>
+          <td class="num">—</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Heat pump</td>
+        </tr>
+        <tr>
+          <td class="slot">2-04</td>
+          <td><span class="label">PUMP 1</span></td>
+          <td class="device">IEK ВА47-29</td>
+          <td class="num">C</td>
+          <td class="num">10 A</td>
+          <td class="num">—</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Pump no. 1 in the utility room</td>
+        </tr>
+        <tr>
+          <td class="slot">2-05</td>
+          <td><span class="label">FREEZER</span></td>
+          <td class="device">IEK ВА47-29</td>
+          <td class="num">C</td>
+          <td class="num">40 A</td>
+          <td class="num">—</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Freezer</td>
+        </tr>
+        <tr>
+          <td class="slot">2-R</td>
+          <td><span class="label">RCD POOL</span></td>
+          <td class="device">IEK ВД1-63 (RCD)</td>
+          <td class="num">—</td>
+          <td class="num">32 A</td>
+          <td class="num">30 mA</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Residual-current protection for the pool group</td>
+        </tr>
+        <tr>
+          <td class="slot">2-06</td>
+          <td><span class="label">POOL</span></td>
+          <td class="device">IEK ВА47-29</td>
+          <td class="num">C</td>
+          <td class="num">25 A</td>
+          <td class="num">—</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Pool equipment</td>
+        </tr>
+        <tr>
+          <td class="slot">2-07</td>
+          <td><span class="label">RELAY SUPPLY</span></td>
+          <td class="device">IEK ВА47-29</td>
+          <td class="num">C</td>
+          <td class="num">10 A</td>
+          <td class="num">—</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Supply to the pool timer relay</td>
+        </tr>
+        <tr>
+          <td class="slot">2-T</td>
+          <td><span class="label">POOL TIMER</span></td>
+          <td class="device">IEK programmable timer relay</td>
+          <td class="num">—</td>
+          <td class="num">16 A</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="feeds">Switches the pool contactor coil on schedule</td>
+        </tr>
+        <tr>
+          <td class="slot">2-K</td>
+          <td><span class="label">POOL CONTACTOR</span></td>
+          <td class="device">IEK КМ modular contactor</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="feeds">Pool load, driven by the timer</td>
+        </tr>
+        <tr><td class="slot" colspan="8"><strong>Phase L3</strong></td></tr>
+        <tr>
+          <td class="slot">3-01</td>
+          <td><span class="label">AC</span></td>
+          <td class="device">IEK ВА47-29</td>
+          <td class="num">C</td>
+          <td class="num">25 A</td>
+          <td class="num">—</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Air conditioner</td>
+        </tr>
+        <tr>
+          <td class="slot">3-02</td>
+          <td><span class="label">IRRIGATION</span></td>
+          <td class="device">IEK ВА47-29</td>
+          <td class="num">C</td>
+          <td class="num">10 A</td>
+          <td class="num">—</td>
+          <td class="num"><span class="tbd">TBD</span></td>
+          <td class="feeds">Irrigation water controller</td>
+        </tr>
+        <tr>
+          <td class="slot">3-03</td>
+          <td><span class="label">SPARE</span></td>
+          <td class="device">IEK ARMAT</td>
+          <td class="num">C</td>
+          <td class="num">63 A</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="feeds">Not in use</td>
+        </tr>
+        <tr>
+          <td class="slot">3-04</td>
+          <td><span class="label">SPARE</span></td>
+          <td class="device">IEK ARMAT</td>
+          <td class="num">C</td>
+          <td class="num">63 A</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="feeds">Not in use</td>
+        </tr>
+        <tr>
+          <td class="slot">3-S</td>
+          <td><span class="label">SOCKETS</span></td>
+          <td class="device">4× ABB M1173 DIN sockets</td>
+          <td class="num">—</td>
+          <td class="num">16 A</td>
+          <td class="num">—</td>
+          <td class="num">—</td>
+          <td class="feeds">Permanent service sockets in the board</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <div class="section-num"><span class="num">§ 04</span><h2>If Something Trips</h2></div>
+    <div class="care">
+      <div class="item">
+        <span class="ord">Note I</span>
+        <h3>A breaker has tripped</h3>
+        <p>Find the lever in the lower position, switch off what is connected to that circuit, and lift the lever back up. If it trips again immediately, leave it off and call us. There is a fault on the circuit.</p>
+      </div>
+      <div class="item">
+        <span class="ord">Note II</span>
+        <h3>One phase is dead</h3>
+        <p>Each phase has its own voltage &amp; current relay. If one row of circuits is off and the others work, that phase's relay has cut it. It reconnects on its own once the voltage is back in range. If it keeps cutting out, call us.</p>
+      </div>
+      <div class="item">
+        <span class="ord">Note III</span>
+        <h3>Generator</h3>
+        <p>The transfer switch (ATS) moves the house to the generator and back automatically. Do not touch the generator ATS control group on the top rail. If the generator does not take over during an outage, call us.</p>
+      </div>
+      <div class="item">
+        <span class="ord">Note IV</span>
+        <h3>Whole house off, nothing tripped</h3>
+        <p>Check the Wi-Fi switch of the main contactor first: if it was switched off remotely, the whole house goes dark. If it is on, it is a grid-side outage and the generator should take over.</p>
+      </div>
+      <div class="item">
+        <span class="ord">Note V</span>
+        <h3>Monthly RCD test</h3>
+        <p>Once a month, press the <strong>T</strong> button on each of the three RCDs (hall &amp; kitchen, LED, pool). The lever should snap down. Lift it back up.</p>
+      </div>
+      <div class="item">
+        <span class="ord">Note VI</span>
+        <h3>Pool runs at the wrong time</h3>
+        <p>The pool is switched by the timer relay on row L2. Its schedule is set with the MENU / ▲ / ▼ / OK buttons. If the display is blank, check the RELAY SUPPLY breaker (C10).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-num"><span class="num">§ 05</span><h2>Service</h2></div>
+    <div class="service">
+      <div class="who">
+        <h3 class="name">Vano Grigoryan</h3>
+        <span class="role">Master Electrician · DRAFTVOLT</span>
+      </div>
+      <dl>
+        <dt>Telephone</dt>
+        <dd><a href="tel:+37498729898">+374 98 72 98 98</a></dd>
+        <dt>Email</dt>
+        <dd><a href="mailto:vanogrigoryan7@gmail.com">vanogrigoryan7@gmail.com</a></dd>
+        <dt>Standards Reference</dt>
+        <dd>DRAFTVOLT — Five Standards, Catalogue №.05</dd>
+      </dl>
+    </div>
+  </section>
+
+  <footer class="colophon">
+    <div>
+      <div>Drawn · Wired · Documented · MMXXVI</div>
+      <div class="copper">DRAFTVOLT</div>
+    </div>
+    <div class="right">
+      <div>Passport · DV-Q5A3S</div>
+      <div>This document is unique to this panel.</div>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
